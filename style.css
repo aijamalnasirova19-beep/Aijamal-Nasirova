@@ -1,0 +1,361 @@
+/* ==========================
+   LUXURY WEDDING STYLE
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#faf8f3;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* LOADER */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-heart{
+    font-size:60px;
+    color:#b22222;
+    animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+    100%{transform:scale(1);}
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.navbar ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:liner-gradient(rgba(90,0,0,.45),rgba(90,0,0,.45)),url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.5);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h3{
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:90px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#b22222;
+}
+
+.hero-content p{
+    font-size:22px;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#b22222;
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* TITLES */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2::before{
+    content:"*";
+    margin-right:10px;
+    font-size:55px;
+    color:#8b0000;
+    font-family:'Cormorant Garamond',serif;
+}
+.section-title h2::after{
+    content:"*";
+    margin-right:10px;
+}
+
+.section-title p{
+    margin-top:10px;
+}
+
+/* SECTIONS */
+
+.invitation,
+.countdown-section,
+.love-story,
+.gallery-section,
+.location-section,
+.rsvp-section{
+    padding:#fffaf5;
+}
+
+
+/* EVENT */
+
+.event-card{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.event-box{
+    background:white;
+    border:3px solid #b22222;
+    border-radius:25px;
+}
+
+.event-box h3{
+    color:#b8860b;
+    margin-bottom:10px;
+}
+
+/* COUNTDOWN */
+
+#countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.time-box{
+    width:140px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.time-box span{
+    display:block;
+    font-size:40px;
+    color:#b22222;
+    font-weight:bold;
+}
+
+/* STORY */
+
+.story-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* LOCATION */
+
+.location-text{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.map-btn{
+    display:block;
+    width:max-content;
+    margin:auto;
+    padding:15px 35px;
+    background:#b22222;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+}
+
+/* RSVP */
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
+}
+
+form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#b22222;
+    color:white;
+    font-size:18px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#6b0000;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer h2{
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:10px;
+}
+
+/* MUSIC */
+
+#musicBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#b22222;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar ul{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .section-title h2{
+        font-size:38px;
+    }
+
+    .gallery img{
+        height:300px;
+    }
+
+    .story-box{
+        font-size:18px;
+    }
+}
